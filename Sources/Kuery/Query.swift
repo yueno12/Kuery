@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 public class Query<ResultType> where ResultType : NSFetchRequestResult {
-    private let fetchRequest: NSFetchRequest<ResultType>
+    public let fetchRequest: NSFetchRequest<ResultType>
 
     public init(_: ResultType.Type) {
         fetchRequest = NSFetchRequest(entityName: String(describing: ResultType.self))
